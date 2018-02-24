@@ -9,8 +9,8 @@ Funcionalidade: Meu perfil
     Esquema do Cenario: Atualizar meu perfil
 
         Dado que eu estou autenticado com "eu@papito.io" e "123456"
-        Quando eu acesso o meu perfil
-        E completo o meu cadastro com "<empresa>" e "<cargo>"
+        E eu acesso o meu perfil
+        Quando completo o meu cadastro com "<empresa>" e "<cargo>"
         Então devo ver a mensagem "Perfil atualizado com sucesso." de atualização cadastral
 
         Exemplos:

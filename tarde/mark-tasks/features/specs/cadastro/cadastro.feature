@@ -8,6 +8,7 @@ Funcionalidade: Cadastro
     Contexto: Cadastro
         Dado que eu acessei a página de cadastro
 
+    @smoke
 	Cenário: Cadastro simplificado
 
         E possuo os seguintes dados:

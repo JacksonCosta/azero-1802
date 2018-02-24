@@ -13,6 +13,10 @@ Então('vejo as minhas tarefas') do
   expect(@tarefas.titulo.text).to eql 'Painel de Atividades'
 end
 
+Então('não sou autenticado') do
+  expect(@tarefas.has_no_itens?).to be true
+end
+
 Então('devo ver a mensagem {string}') do |mensagem|
   expect(@login.alerta).to have_content mensagem
 end
