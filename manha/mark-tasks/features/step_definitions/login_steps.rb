@@ -16,3 +16,7 @@ end
 Então('devo ver a mensagem {string}') do |mensagem_alerta|
   expect(@login.alert.text).to eql mensagem_alerta
 end
+
+Então('não sou autenticado') do
+  expect(@tasks.has_no_titulo?).to be false
+end

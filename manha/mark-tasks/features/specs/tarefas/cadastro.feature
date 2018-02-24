@@ -5,7 +5,7 @@ Funcionalidade: Cadastrar tarefas
     Sendo um usuário organizado
     Posso cadastrar novas tarefas
 
-    @nova_task @auth
+    @nova_task @auth @logout @smoke
     Cenario: Nova tarefa
 
         Dado que eu tenho uma tarefa com os atributos:
@@ -20,4 +20,21 @@ Funcionalidade: Cadastrar tarefas
         Quando faço o cadastro desta tarefa
         Então devo ver este cadastro com status "Em andamento"
 
-        
+    @tarefa_dup @auth @logout
+    Cenario: Tarefa Duplicada
+
+        Dado que eu tenho uma tarefa com os atributos:
+            | titulo | Ler um livro de Go lang |
+            | data   | 01/04/2018              |
+        E eu quero taguear esta tarefa com:
+            | tag      |
+            | go       |
+            | livro    |
+            | leitura  |
+            | hardcore |
+        Mas eu já cadastrei esta tarefa e não tinha percebido
+        Quando faço o cadastro desta tarefa
+        Então devo ver a mensagem "Tarefa duplicada." ao tentar fazer o cadastro
+
+
+    
